@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <section class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="home pic/logo2.png" alt="">
+                <h1 class="logo-text">FanOfan</h1>
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="Home.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Category</a>
+                        <div class="dropdown-content">
+                            <a href="ceiling.html">Ceiling Fan</a>
+                            <a href="table.html">Table Fan</a>
+                            <a href="exhaust.html">Exhausted Fan</a>
+                            <a href="bracket.html">Bracket Fan</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery page.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="text-container">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact">
+        <!-- info section -->
+        <section>
+            <div class="row5">
+                <div class="column6">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot" style="color: #ffffff;" data-aos="fade-up"></i>
+                    </div>
+                    <p><strong>Address:</strong> 250 Rt 59, Airmont</p>
+                </div>
+                <div class="column6">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone" style="color: #ffffff;" data-aos="fade-up"></i>
+                    </div>
+                    <p><strong>Phone:</strong> + 01 234 567 88</p>
+                </div>
+                <div class="column6">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope-circle-check" style="color: #ffffff;" data-aos="fade-up"></i>
+                    </div>
+                    <p><strong>Email:</strong> info@fanofan.com</p>
+                </div>
+                <div class="column6">
+                    <div class="icon">
+                        <i class="fa-solid fa-globe" style="color: #ffffff;" data-aos="fade-up"></i>
+                    </div>
+                    <p><strong>Website:</strong> fanofan.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- form section  -->
+        <section>
+            <div class="row5">
+                <div class="column7" data-aos="fade-up" data-aos-duration="5000">
+                    <h1>Reach Out To Us</h1>
+                    <form class="r_form">
+                        <div class="form-floating mb-3">
+                            <input id="r_name" type="text" class="form-control" placeholder=" ">
+                            <label for="r_name">Name</label>
+                            <hr>
+                            <p class="form_error_text" id="nameError"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="r_email" type="email" class="form-control" placeholder=" ">
+                            <label for="r_email">Email</label>
+                            <hr>
+                            <p class="form_error_text" id="emailError"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input id="r_subject" type="url" class="form-control" placeholder=" ">
+                            <label for="r_subject">Subject</label>
+                            <hr>
+                            <p class="form_error_text" id="subjectError"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea id="r_message" class="form-control" placeholder=" "></textarea>
+                            <label for="r_message">Message</label>
+                            <hr>
+                            <p class="form_error_text" id="messageError"></p>
+                        </div>
+                        <button type="submit" id="r_btn" class="button">Send</button>
+                    </form>
+                    <div id="successMessage"></div>
+                </div>
+                <div class="column8" data-aos="fade-up" data-aos-duration="5000">
+                    <img src="depositphotos_662281822-stock-photo-summer-time-metal-ventilator-modern.webp" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- site map section  -->
+        <section>
+            <div class="location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2375.0936621327833!2d-2.2365074240057425!3d53.4667861657059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb18d86536991%3A0x5ccce77157e9c80e!2sUniversity%20Place!5e0!3m2!1sen!2s!4v1711120234139!5m2!1sen!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let btn = document.getElementById("r_btn");
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            let r_name = document.getElementById("r_name").value;
+            let r_email = document.getElementById("r_email").value;
+            let r_subject = document.getElementById("r_subject").value;
+            let r_message = document.getElementById("r_message").value;
+
+            // Error message Variables
+            let nameError = document.getElementById('nameError');
+            let emailError = document.getElementById('emailError');
+            let subjectError = document.getElementById('subjectError');
+            let messageError = document.getElementById('messageError');
+
+            //Name and Email REGEXP 
+            let nameRegex = /^[A-z]+$/;
+            let emailRegex = /^\w+([\.-]?\w)*@\w+([\.-]?\w)*(\.\w{2,3})+$/;
+
+            //Validation Variables
+            let isNameValid = false;
+            let isEmailValid = false;
+            let isSubjectValid = false;
+            let isMessageValid = false;
+
+            //For Name Field start
+            if (r_name == "") {
+                nameError.innerText = "Kindly fill the Name Field";
+            } else if (!nameRegex.test(r_name)) {
+                nameError.innerText = "Only Alphabets are allowed in the name field";
+            } else {
+                nameError.innerText = "";
+                isNameValid = true;
+            }
+            //For Name Field end
+
+            //For Email Field start
+            if (r_email == "") {
+                emailError.innerText = "Kindly fill the Email Field";
+            } else if (!emailRegex.test(r_email)) {
+                emailError.innerText = "Email should be in the correct format i.e abcd@example.com";
+            } else {
+                emailError.innerText = "";
+                isEmailValid = true;
+            }
+            //For Email Field end
+
+            //For Subject Field start
+            if (r_subject == "") {
+                subjectError.innerText = "Kindly fill the Subject Field";
+            } else {
+                subjectError.innerText = "";
+                isSubjectValid = true;
+            }
+            //For Subject Field end
+
+            //For Message Field start
+            if (r_message == "") {
+                messageError.innerText = "Kindly fill the Message Field";
+            } else {
+                messageError.innerText = "";
+                isMessageValid = true;
+            }
+            //For Message Field end
+
+            if (isEmailValid && isMessageValid && isNameValid && isSubjectValid) {
+                let successMessage = document.getElementById("successMessage");
+
+                successMessage.innerHTML = `<p style="background-color: #03656ab8; color: #ffffff; padding: 20px 10px; border-radius: 5px;">Your Data Inserted Successfully!</p>`;
+
+                setTimeout(() => {
+                    successMessage.innerText = ``;
+                }, 5000);
+            }
+        });
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-section">
+                <h2>FANoFAN</h2>
+                <p>We offer a wide range of electric fans to suit all your needs. </p>
+            </div>
+            <!-- Categories -->
+            <div class="footer-section categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="/exhaust-fans">Exhaust Fans</a></li>
+                    <li><a href="/ceiling-fans">Ceiling Fans</a></li>
+                    <li><a href="/table-fans">Table Fans</a></li>
+                    <li><a href="/bracket-fans">Bracket Fans</a></li>
+                </ul>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/login" class="social-icon" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/" class="social-icon" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
